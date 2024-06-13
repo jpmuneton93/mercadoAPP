@@ -21,14 +21,22 @@ fetch(url,peticion)
         columna.classList.add("col")
         let tarjeta=document.createElement("div")
         tarjeta.classList.add("card", "shadow", "h-100")
+        let imagen=document.createElement("img")
+        imagen.classList.add("text-center")
+        imagen.src=usuario.nombres
        
 
         let nombreUsuario=document.createElement("h3")
         nombreUsuario.classList.add("text-center")
-        nombreUsuario.textContent=usuario.nombre
+        nombreUsuario.textContent=usuario.nombres
 
-        tarjeta.appendChild(imagen)
+        let correo=document.createElement("p")
+        correo.classList.add("text-center")
+        correo.textContent=usuario.correo
+
+
         tarjeta.appendChild(nombreUsuario)
+        tarjeta.appendChild(correo)
         columna.appendChild(tarjeta)
         fila.appendChild(columna)
 
