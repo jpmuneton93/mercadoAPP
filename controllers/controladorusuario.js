@@ -30,12 +30,17 @@ fetch(url,peticion)
         nombreUsuario.classList.add("text-center")
         nombreUsuario.textContent=usuario.nombres
 
+        let cedula=document.createElement("p")
+        cedula.classList.add("text-center")
+        cedula.textContent=usuario.cedula
+
         let correo=document.createElement("p")
         correo.classList.add("text-center")
         correo.textContent=usuario.correo
 
 
         tarjeta.appendChild(nombreUsuario)
+        tarjeta.appendChild(cedula)
         tarjeta.appendChild(correo)
         columna.appendChild(tarjeta)
         fila.appendChild(columna)
